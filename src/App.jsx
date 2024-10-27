@@ -1,6 +1,7 @@
 // src/App.jsx
 import React from 'react';
 import Weather from './components/Weather';
+import CityWeather from './components/CityWeather';
 
 
 const App = () => {
@@ -8,7 +9,7 @@ const App = () => {
         <div className="App">
           
             <Weather />
-          
+          <CityWeather/>
         </div>
     );
 };
