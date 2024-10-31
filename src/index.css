@@ -11,7 +11,7 @@
 
   /* color-scheme: light dark; */
   /* color: rgba(255, 255, 255, 0.87); */
-  background-color: #121212;
+  background-color: #282A2E;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -42,7 +42,9 @@ h1 {
   line-height: 1.1;
   color:#E0E0E0 ;
 }
-
+h2{
+  color: #E0E0E0;
+}
 button {
   margin: 12px;
   border-radius: 8px;
@@ -52,13 +54,13 @@ button {
   font-weight: 500;
   /* font-family: inherit; */
   font-family:NectoMono ;
-  background-color: #ee5306;
+  background-color: #F45027;
   color: white;
   cursor: pointer;
   transition: border-color 0.25s;
 }
 button:hover {
-  background-color: #005f8c; /* Slightly darker blue */
+  background-color: #f450279a; /* Slightly darker blue */
 }
 button:focus,
 button:focus-visible {
