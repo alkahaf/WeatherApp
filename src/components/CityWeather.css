@@ -7,6 +7,7 @@
     padding: 1rem 0;
 }
 
+/* Default Card Styling */
 .forecast-card {
     background-color: #1E1E1E;
     border-radius: 8px;
@@ -18,16 +19,38 @@
     color: #E0E0E0;
 }
 
+/* Card Titles and Text */
 .forecast-card h3 {
     margin-bottom: 0.5rem;
     font-size: 1.1rem;
-}
-
-.forecast-card h3 {
-    color: #61fffc; /* Coral */
+    color: #61fffc;
 }
 
 .forecast-card p {
     margin: 0.3rem 0;
     font-size: 0.9rem;
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 480px) {
+    .forecast-row {
+        flex-direction: column; /* Stack cards vertically */
+        align-items: center;
+        gap: 0.5rem; /* Reduce gap between cards */
+        padding: 1rem; /* Additional padding */
+    }
+
+    .forecast-card {
+        width: 100%; /* Full width for mobile */
+        max-width: 320px; /* Limit max width for readability */
+        padding: 0.8rem; /* Slightly smaller padding */
+    }
+
+    .forecast-card h3 {
+        font-size: 1rem; /* Smaller title font size */
+    }
+
+    .forecast-card p {
+        font-size: 0.85rem; /* Smaller text font size */
+    }
 }

@@ -2,17 +2,12 @@
   font-family: "NectoMono";
   src: url("NectoMono-Regular.woff") format("woff");
 }
-:root {
 
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
- font-family: NectoMono;
+:root {
+  font-family: NectoMono;
   line-height: 1.5;
   font-weight: 400;
-
-  /* color-scheme: light dark; */
-  /* color: rgba(255, 255, 255, 0.87); */
   background-color: #282A2E;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -35,16 +30,20 @@ body {
   justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  flex-direction: column; /* Stack elements vertically */
+  padding: 20px; /* Add padding for mobile */
 }
 
 h1 {
-  font-size: 3.2em;
+  font-size: 2.5em;
   line-height: 1.1;
-  color:#E0E0E0 ;
-}
-h2{
   color: #E0E0E0;
 }
+h2 {
+  font-size: 1.8em;
+  color: #E0E0E0;
+}
+
 button {
   margin: 12px;
   border-radius: 8px;
@@ -52,15 +51,15 @@ button {
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
-  /* font-family: inherit; */
-  font-family:NectoMono ;
+  font-family: NectoMono;
   background-color: #F45027;
   color: white;
   cursor: pointer;
   transition: border-color 0.25s;
+  width: auto;
 }
 button:hover {
-  background-color: #f450279a; /* Slightly darker blue */
+  background-color: #f450279a;
 }
 button:focus,
 button:focus-visible {
@@ -71,24 +70,54 @@ input[type="number"] {
   margin: 12px;
   border-radius: 5px;
   padding: 10px;
-  width: 100%; /* Make it responsive */
-  box-sizing: border-box; /* Include padding in width */
+  width: 100%; /* Full width for responsive design */
+  max-width: 400px; /* Limit max width on larger screens */
+  box-sizing: border-box;
 }
 
 input[type="number"]:focus {
-  border-color: #0077B6; /* Change border color on focus */
+  border-color: #0077B6;
   outline: none;
 }
-/* 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+
+/* Media Query for Tablet and Smaller Screens */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
   }
-  a:hover {
-    color: #747bff;
+  h2 {
+    font-size: 1.5em;
   }
+
   button {
-    background-color: #f9f9f9;
+    width: 100%; /* Full width on smaller screens */
   }
-} */
+
+  a {
+    font-size: 0.9em;
+  }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.8em;
+  }
+  h2 {
+    font-size: 1.2em;
+  }
+
+  body {
+    padding: 10px;
+  }
+
+  button {
+    font-size: 0.9em; /* Smaller font for buttons */
+    padding: 0.5em 1em;
+  }
+
+  input[type="number"] {
+    padding: 8px;
+    font-size: 0.9em; /* Smaller font for input */
+  }
+}
